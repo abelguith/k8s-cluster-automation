@@ -13,7 +13,9 @@ This repository contains files to automate the provisioning and configuration of
 ## How to Use  
 
 1. **Provision Infrastructure**  
-   Navigate to the `Infrastructure provisioning files/` directory and use Terraform to provision the Azure infrastructure:  
+   Navigate to the `Infrastructure provisioning files/` directory and use Terraform to provision the Azure infrastructure. During execution, Terraform will:  
+   - Automatically generate an **inventory file** with the details of the created virtual machines.  
+   - Trigger the Ansible playbooks to configure the VMs and deploy a Kubernetes cluster.  
 
    ```bash
    terraform init  
